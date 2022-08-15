@@ -1,0 +1,15 @@
+
+steps:
+  - name: gcr.io/cloud-builders/docker
+    args:
+      - '-c'
+      - >-
+        docker build -t $_DOCKER_IMAGE .
+    entrypoint: bash
+  - name: gcr.io/cloud-builders/docker
+    args:
+      - '-c'
+      - >-
+        docker push $_DOCKER_IMAGE
+    entrypoint: bash
+timeout: 12000s
