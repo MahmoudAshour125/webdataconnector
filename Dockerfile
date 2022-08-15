@@ -12,7 +12,7 @@ COPY . /app
 
 RUN chown -R node /app
 
-EXPOSE 3005
+EXPOSE 8888
 
 CMD ["npm","start"]
 
